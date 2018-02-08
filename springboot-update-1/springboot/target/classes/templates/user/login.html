@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>LOGIN</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/css/styles.css" rel="stylesheet" />
+    <link href="/css/styles.css" rel="stylesheet" />
+
+    
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/app.js"></script>
+</head>
+<body>
+
+<style type="text/css">
+    .container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #ffffff;
+    width:530px;
+}
+</style>
+<!--     <div layout:fragment="content"> -->
+    <div class="container">
+      <div id="login">
+        <form class="form-signin" th:action="@{/login}" th:object="${admin}" action="/login" method="post">
+            <fieldset>
+            <h4 class="form-signin-heading">Silahkan isi Username dan Password anda</h4>
+            
+            <div class="alert alert-danger" th:if="${param.error}">
+                Email and password is incorrect or your account is not activated, please try again.
+            </div>
+            <input type="text" id="inputEmail" name="username" class="form-control top" placeholder="Username or Email" required="required" autofocus="autofocus"/>
+            <input type="password" id="inputPassword" name="password" class="form-control bottom" placeholder="Password" required="required"/>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" name="remember-me"/> Ingat Saya
+                </label>
+            </div>
+            <button class="btn btn-lg btn-danger btn-block" type="submit">Login To IdVer</button>
+            </fieldset>
+        </form>
+
+</div>
+</div>
+<!--     </div> -->
+</body>
+</html>
+
+
